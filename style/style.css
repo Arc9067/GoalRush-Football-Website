@@ -1,0 +1,601 @@
+/*
+font family start here
+*/
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+/*font family end here
+*/
+/*
+    variable declaration starts here
+*/
+:root {
+  --primary: #eef0f2;
+  --sec: #cb0b1b;
+  --white: #ffffff;
+  --darkGray: #333333;
+  --black-clr: #000000;
+  --header-height: 3.5rem;
+  --body-clr: #110f0f;
+  --max-width: 1400px;
+  /*========== Font and typography ==========*/
+  --Mont: "Montserrat", sans-serif;
+  --open: "Open Sans", sans-serif;
+  --Bunge: "Bungee", cursive;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  /*========== Font weight ==========*/
+  --openReg: 400;
+  --openMed: 500;
+  --openSemi: 800;
+  --MontReg: 400;
+  --MontMed: 500;
+  --MontSemi: 600;
+  --MontBold: 700;
+}
+
+/*
+    variable declaration ends here
+*/
+/* Responsive typography */
+@media screen and (min-width: 992px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::-moz-selection {
+  color: var(--white);
+  background-color: var(--black-clr);
+}
+
+*::selection {
+  color: var(--white);
+  background-color: var(--black-clr);
+}
+
+body {
+  background-color: var(--primary);
+  font-family: var(--open);
+  color: var(--bl);
+  font-size: var(--normal-font-size);
+  position: relative;
+  overflow-x: hidden;
+}
+body .body-overlay {
+  position: absolute;
+  height: 400px;
+  width: 500px;
+  z-index: -1;
+}
+body .ball-overlay {
+  height: 300px;
+  width: 400px;
+  position: absolute;
+  width: 10rem;
+  right: -30px;
+  top: 100px;
+  opacity: 0.7;
+}
+body .boot1-overlay {
+  width: 12rem;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  opacity: 0.5;
+}
+
+a,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+header nav {
+  width: 95%;
+  height: 4rem;
+  max-width: var(--max-width);
+  display: grid;
+  align-items: center;
+}
+header nav .inner-nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav .inner-nav .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
+}
+header nav .inner-nav .nav-logo .title {
+  font-family: var(--Bunge);
+  letter-spacing: 0.2rem;
+  color: var(--darkGray);
+  font-size: var(--h3-font-size);
+  display: block;
+}
+header nav .inner-nav .nav-logo .title img {
+  width: 4rem;
+}
+header nav .inner-nav .nav-txt {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+header nav .inner-nav .nav-txt ul {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  font-family: var(--Mont);
+  font-weight: var(--openSemi);
+  font-family: var(--small-font-size);
+  color: #727272;
+}
+header nav .inner-nav .nav-txt ul li {
+  padding: 4px 20px;
+  color: lightgray;
+  font-size: var(--smaller-font-size-font-size);
+  color: var(--darkGray);
+}
+header nav .inner-nav .nav-txt ul li a {
+  transition: all 0.3s ease-out;
+}
+header nav .inner-nav .nav-txt ul li a:hover {
+  color: var(--sec);
+}
+header nav .inner-nav .nav-txt ul li .btn {
+  background-color: var(--sec);
+  border-radius: 35px;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: var(--primary);
+  padding: 10px 20px;
+  font-family: var(--Mont);
+  font-weight: var(--MontSemi);
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 4rem;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+main #home {
+  width: 100%;
+  position: relative;
+}
+main #home .players1-overlay {
+  width: 12rem;
+  position: absolute;
+  right: 0;
+  bottom: 100px;
+}
+main #home .inner-home {
+  width: 100%;
+  height: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+main #home .inner-home .row .col-txt {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+main #home .inner-home .row .col-txt .subtitle {
+  color: var(--black-clr);
+  font-family: var(--Mont);
+  font-weight: var(--MontSemi);
+  text-transform: uppercase;
+  font-weight: var(--MontBold);
+  max-width: 30rem;
+  font-size: var(--h1-font-size);
+}
+main #home .inner-home .row .col-txt .subtitle span {
+  color: var(--sec);
+  font-weight: var(--MontBold);
+}
+main #home .inner-home .row .col-txt .title {
+  font-family: var(--Mont);
+  font-weight: var(--MontBold);
+  max-width: 30rem;
+  text-transform: uppercase;
+  font-size: var(--biggest-font-size);
+  font-family: var(--Bunge);
+}
+main #home .inner-home .row .col-txt .title .Rushspan {
+  background-color: var(--black-clr);
+  color: var(--white);
+}
+main #home .inner-home .row .col-txt .title span {
+  color: var(--sec);
+}
+main #home .inner-home .row .col-txt .title .ball1 img {
+  width: 5rem;
+}
+main #home .inner-home .row .col-txt .des {
+  max-width: 25rem;
+  font-family: var(--Mont);
+  display: block;
+  margin-left: 4rem;
+}
+main #home .inner-home .row .col-txt footer {
+  width: 100%;
+}
+main #home .inner-home .row .col-txt footer img {
+  width: 12rem;
+}
+main #home .inner-home .row .col-txt footer .btn {
+  background-color: var(--sec);
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  color: var(--white);
+  font-family: var(--Mont);
+  font-weight: var(--MontSemi);
+  text-transform: capitalize;
+}
+main #about {
+  width: 100vw;
+  background-color: var(--body-clr);
+  padding-bottom: 20px;
+}
+main #about .inner-about {
+  height: 100%;
+  width: 95%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+main #about .inner-about .inner-about-row {
+  padding: 20px;
+}
+main #about .inner-about .inner-about-row .about-txt1 .row .arow2-first-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+main #about .inner-about .inner-about-row .about-txt1 .row .arow2-first-div .arow2-txt .title {
+  font-family: var(--Bunge);
+  max-width: 30rem;
+  color: var(--white);
+  font-size: var(--biggest-font-size);
+}
+main #about .inner-about .inner-about-row .about-txt1 .row .arow2-first-div .arow2-txt .title span {
+  color: var(--sec);
+  background-color: var(--white);
+}
+main #about .inner-about .inner-about-row .about-txt1 .row .arow2-first-div .arow2-txt .para {
+  padding: 5px;
+  color: #727272;
+  border-radius: 7px;
+}
+main #about .inner-about .inner-about-row .about-txt1 .row .arow2-first-div .about-firstimg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main #about .inner-about .inner-about-row .about-txt1 .row .arow2-first-div .about-firstimg img {
+  width: 10rem;
+  display: block;
+}
+main #about .inner-about .inner-about-row .about-txt1 .row .about-div2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+main #about .inner-about .inner-about-row .about-txt1 .row .about-div2 figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+main #about .inner-about .inner-about-row .about-txt1 .row .about-div2 figure img {
+  width: 12rem;
+  cursor: pointer;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+main #about .inner-about .inner-about-row .about-txt1 .row .about-div2 figure figcaption {
+  font-family: var(--Mont);
+  color: var(--white);
+  font-weight: var(--MontBold);
+  cursor: pointer;
+  text-transform: capitalize;
+}
+main #about .inner-about .inner-about-row .about-txt1 .row .about-div3 {
+  height: 300px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 0.9fr);
+  justify-content: space-between;
+  margin-top: 50px;
+  color: var(--white);
+  gap: 1rem;
+}
+main #about .inner-about .inner-about-row .about-txt1 .row .about-div3 .title {
+  font-family: var(--Mont);
+  text-transform: uppercase;
+  font-family: var(--MontBold);
+  color: var(--sec);
+}
+main #about .inner-about .inner-about-row .about-txt1 .row .about-div3 p {
+  color: #727272;
+}
+main #about .inner-about .inner-about-row .about-txt2 {
+  height: inherit;
+}
+main #about .inner-about .inner-about-row .about-txt2 .abouttxt2-div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main #about .inner-about .inner-about-row .about-txt2 .abouttxt2-div div .title {
+  font-family: var(--Mont);
+  text-transform: uppercase;
+  font-family: var(--MontBold);
+  color: var(--sec);
+}
+main #about .inner-about .inner-about-row .about-txt2 .abouttxt2-div div p {
+  color: #727272;
+}
+main #table {
+  width: 100vw;
+  background-color: var(--primary);
+  position: relative;
+}
+main #table .inner-table {
+  width: 100%;
+  margin: 0 auto;
+}
+main #table .inner-table .table-header {
+  width: 100%;
+  background-color: var(--white);
+}
+main #table .inner-table .table-header nav {
+  position: sticky;
+  max-width: var(--max-width);
+  top: 20px;
+  width: 90%;
+  margin: 0 auto;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+main #table .inner-table .table-header nav ul {
+  display: flex;
+  font-family: var(--Mont);
+  font-weight: var(--MontBold);
+  text-transform: capitalize;
+  gap: 1rem;
+  font-size: var(--normal-font-size);
+}
+main #table .inner-table .table-header nav ul .active {
+  color: var(--sec);
+  position: relative;
+}
+main #table .inner-table .table-header nav ul .active:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  border-top: 1px solid #cb0b1b;
+  margin-top: 1rem;
+}
+main #table .inner-table .table-header nav ul li {
+  color: #727272;
+  cursor: pointer;
+}
+main #table .inner-table #league-sec {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+main #table .inner-table #league-sec .row {
+  width: 95%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+main #table .inner-table #league-sec .row .league-ct {
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+main #table .inner-table #league-sec .row .league-ct .league-type ul {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  overflow-x: scroll;
+  flex-wrap: wrap;
+}
+main #table .inner-table #league-sec .row .league-ct .league-type ul li {
+  font-family: var(--Mont);
+  text-transform: capitalize;
+  font-weight: var(--MontSemi);
+  cursor: pointer;
+  color: #727272;
+  padding: 0.5rem 0.5rem;
+  border-radius: 20px;
+}
+main #table .inner-table #league-sec .row .league-ct .league-type ul .active {
+  background-color: var(--sec);
+  color: var(--white);
+}
+main #table .inner-table #league-sec .row .league-ct .league-div {
+  height: 100%;
+  margin-top: 1rem;
+  display: grid;
+  place-items: center;
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .loading-div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .loading-div h3 {
+  font-family: var(--Mont);
+  font-weight: var(--MontMed);
+  color: #727272;
+}
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .loading-div .league-loader {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #727272;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spinner 1.5s linear infinite;
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div {
+  height: 100%;
+  width: 100%;
+  margin-top: 2rem;
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div .table-scorer .row {
+  width: 100%;
+  height: 200px;
+  padding: 0;
+  margin: 0;
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div .table-scorer .row .scorer {
+  background-color: var(--primary);
+  background: #110f0f;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: relative;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div .table-scorer .row .scorer .scorer-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+  padding: 9px;
+  border-bottom-left-radius: inherit;
+  border-top-left-radius: inherit;
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div .table-scorer .row .scorer .scorer-details .scorerName {
+  z-index: 4;
+  color: var(--white);
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div .table-scorer .row .scorer .scorer-details .scorerName h3 {
+  font-family: var(--Mont);
+  font-weight: var(--MontBold);
+  font-size: var(--h2-font-size);
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div .table-scorer .row .scorer .scorer-details .scorerName h3 .ScorerfirstName {
+  color: var(--sec);
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div .table-scorer .row .scorer .scorer-details .scorerName p {
+  font-family: var(--Mont);
+  font-weight: var(--MontReg);
+  text-transform: capitalize;
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div .table-scorer .row .scorer .scorer-details .scorerName p:after {
+  content: "";
+  width: 20%;
+  height: 2px;
+  background-color: #cb0b1b;
+  display: block;
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div .table-scorer .row .scorer .scorer-details .scorerName .match-info {
+  height: 100px;
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div .table-scorer .row .scorer .scorer-details .scorerName .match-info h4 {
+  font-size: var(--smaller-font-size);
+  font-family: var(--Mont);
+  font-weight: var(--MontSemi);
+  text-transform: capitalize;
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div .table-scorer .row .scorer .scorer-details .scorerName .match-info h4 span {
+  color: var(--sec);
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div .table-scorer .row .scorer .scorer-details .scorer-club {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div .table-scorer .row .scorer .scorer-details .scorer-club img {
+  width: 4rem;
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div .table-scorer .row .scorer .scorer-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  padding: 0;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-table-div .table-scorer .row .scorer .scorer-img img {
+  width: 100%;
+  border-radius: 50%;
+}
+main #table .inner-table #league-sec .row .league-ct .league-div .league-standing {
+  height: 50vh;
+  width: 100%;
+  background-color: red;
+  margin-top: 2rem;
+}
+main #table .inner-table #league-sec .row .news-section {
+  min-height: 80vh;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  border-radius: 10px;
+}/*# sourceMappingURL=style.css.map */

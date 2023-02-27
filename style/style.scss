@@ -1,0 +1,721 @@
+/*
+font family start here
+*/
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+/*font family end here
+*/
+
+/*
+    variable declaration starts here
+*/
+:root {
+  --primary: #eef0f2;
+  --sec: #cb0b1b;
+  --white: #ffffff;
+  --darkGray: #333333;
+  --black-clr: #000000;
+  --header-height: 3.5rem;
+  --body-clr: #110f0f;
+  --max-width: 1400px;
+
+  /*========== Font and typography ==========*/
+  --Mont: "Montserrat", sans-serif;
+  --open: "Open Sans", sans-serif;
+  --Bunge: "Bungee", cursive;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --openReg: 400;
+  --openMed: 500;
+  --openSemi: 800;
+  --MontReg: 400;
+  --MontMed: 500;
+  --MontSemi: 600;
+  --MontBold: 700;
+}
+/*
+    variable declaration ends here
+*/
+
+/* Responsive typography */
+@media screen and (min-width: 992px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  color: var(--white);
+  background-color: var(--black-clr);
+}
+
+body {
+  background-color: var(--primary);
+  font-family: var(--open);
+  color: var(--bl);
+  font-size: var(--normal-font-size);
+  position: relative;
+  overflow-x: hidden;
+
+  .body-overlay {
+    position: absolute;
+    height: 400px;
+    width: 500px;
+    // background-color: red;
+    z-index: -1;
+  }
+  .ball-overlay {
+    height: 300px;
+    width: 400px;
+    // background-color: var(--sec);
+    position: absolute;
+    width: 10rem;
+    right: -30px;
+    top: 100px;
+    opacity: 0.7;
+  }
+
+  .boot1-overlay {
+    width: 12rem;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    opacity: 0.5;
+  }
+}
+
+a,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+  }
+}
+
+header {
+  // min-height: 4rem;
+  width: 100%;
+  // background-color: var(--white);
+  display: grid;
+  place-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+
+  nav {
+    width: 95%;
+    height: 4rem;
+    // background-color: green;
+    max-width: var(--max-width);
+    display: grid;
+    align-items: center;
+
+    .inner-nav {
+      display: flex;
+      justify-content: space-between;
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        justify-content: space-between;
+        // max-width: 50%;
+        .title {
+          font-family: var(--Bunge);
+          letter-spacing: 0.2rem;
+          color: var(--darkGray);
+          font-size: var(--h3-font-size);
+          display: block;
+          img {
+            width: 4rem;
+          }
+        }
+      }
+      .nav-txt {
+        // background-color: yellow;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        ul {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          // background-color: green;
+          // gap: 2rem;
+          text-transform: capitalize;
+          font-family: var(--Mont);
+          font-weight: var(--openSemi);
+          font-family: var(--small-font-size);
+          color: #727272;
+
+          li {
+            padding: 4px 20px;
+            color: lightgray;
+            font-size: var(--smaller-font-size-font-size);
+            color: var(--darkGray);
+            a {
+              transition: all 0.3s ease-out;
+            }
+            a:hover {
+              color: var(--sec);
+            }
+
+            .btn {
+              background-color: var(--sec);
+              border-radius: 35px;
+              text-transform: uppercase;
+              color: var(--white);
+              font-weight: var(--primary);
+              padding: 10px 20px;
+              font-family: var(--Mont);
+              font-weight: var(--MontSemi);
+            }
+          }
+        }
+      }
+      // .nav-btn {
+      //   background-color: red;
+      //   // width: 30%;
+      // }
+    }
+  }
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  // background-color: var(--sec);
+  padding-top: 4rem;
+  overflow: hidden;
+  overflow-x: hidden;
+
+  #home {
+    // min-height: 100vh;
+    width: 100%;
+    position: relative;
+
+    .players1-overlay {
+      width: 12rem;
+      position: absolute;
+      right: 0;
+      bottom: 100px;
+    }
+
+    .inner-home {
+      // background-color: red;
+      width: 100%;
+      height: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      .row {
+        .col-img {
+          img {
+            // background-color: purple;
+          }
+        }
+        .col-txt {
+          // background-color: red;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          .subtitle {
+            color: var(--black-clr);
+            font-family: var(--Mont);
+            font-weight: var(--MontSemi);
+            text-transform: uppercase;
+            font-weight: var(--MontBold);
+            max-width: 30rem;
+            font-size: var(--h1-font-size);
+
+            span {
+              color: var(--sec);
+              font-weight: var(--MontBold);
+            }
+          }
+          .title {
+            font-family: var(--Mont);
+            font-weight: var(--MontBold);
+            max-width: 30rem;
+            text-transform: uppercase;
+            font-size: var(--biggest-font-size);
+            font-family: var(--Bunge);
+
+            .Rushspan {
+              background-color: var(--black-clr);
+              color: var(--white);
+            }
+
+            span {
+              color: var(--sec);
+            }
+            .ball1 {
+              img {
+                width: 5rem;
+              }
+            }
+          }
+          .des {
+            max-width: 25rem;
+            font-family: var(--Mont);
+            display: block;
+            margin-left: 4rem;
+          }
+
+          footer {
+            // height: 200px;
+            width: 100%;
+            // background-color: red;
+
+            img {
+              width: 12rem;
+            }
+
+            .btn {
+              background-color: var(--sec);
+              padding: 0.5rem 2rem;
+              border-radius: 20px;
+              color: var(--white);
+              font-family: var(--Mont);
+              font-weight: var(--MontSemi);
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #about {
+    // min-height: 100vh;
+    width: 100vw;
+    background-color: var(--body-clr);
+    padding-bottom: 20px;
+
+    .inner-about {
+      height: 100%;
+      width: 95%;
+      // background-color: purple;
+      max-width: var(--max-width);
+      margin: 0 auto;
+
+      .inner-about-row {
+        // background-color: greenyellow;
+        padding: 20px;
+        .about-txt1 {
+          // background-color: green;
+
+          .row {
+            .arow2-first-div {
+              // background-color: rebeccapurple;
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+              .arow2-txt {
+                // background-color: greenyellow;
+                .title {
+                  font-family: var(--Bunge);
+                  // background-color: purple;
+                  max-width: 30rem;
+                  color: var(--white);
+                  font-size: var(--biggest-font-size);
+                  span {
+                    color: var(--sec);
+                    background-color: var(--white);
+                  }
+                }
+                .para {
+                  // background-color: blue;
+                  padding: 5px;
+                  // border: 0.6px solid #cb0b1b;
+                  color: #727272;
+                  border-radius: 7px;
+                }
+              }
+
+              .about-firstimg {
+                width: 100%;
+                // background-color: red;
+                display: flex;
+                justify-content: center;
+                img {
+                  width: 10rem;
+                  // background-color: green;
+                  display: block;
+                }
+              }
+            }
+            .about-div2 {
+              // background-color: red;
+              display: flex;
+              justify-content: space-between;
+              margin-top: 20px;
+
+              figure {
+                // background-color: green;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 1rem;
+                img {
+                  width: 12rem;
+                  cursor: pointer;
+                  border-bottom-left-radius: 50%;
+                  border-bottom-right-radius: 50%;
+                }
+                figcaption {
+                  font-family: var(--Mont);
+                  color: var(--white);
+                  font-weight: var(--MontBold);
+                  cursor: pointer;
+                  text-transform: capitalize;
+                }
+              }
+            }
+
+            .about-div3 {
+              height: 300px;
+              width: 100%;
+              // background-color: red;
+              display: grid;
+              grid-template-columns: repeat(2, 0.9fr);
+              justify-content: space-between;
+              margin-top: 50px;
+              color: var(--white);
+              gap: 1rem;
+
+              .title {
+                font-family: var(--Mont);
+                text-transform: uppercase;
+                font-family: var(--MontBold);
+                color: var(--sec);
+              }
+              p {
+                color: #727272;
+              }
+            }
+          }
+        }
+        .about-txt2 {
+          height: inherit;
+
+          .abouttxt2-div {
+            // background-color: green;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            div {
+              .title {
+                font-family: var(--Mont);
+                text-transform: uppercase;
+                font-family: var(--MontBold);
+                color: var(--sec);
+              }
+              p {
+                color: #727272;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #table {
+    // min-height: 100vh;
+    width: 100vw;
+    background-color: var(--primary);
+    position: relative;
+
+    .inner-table {
+      width: 100%;
+      // height: 100%;
+      margin: 0 auto;
+
+      .table-header {
+        width: 100%;
+        background-color: var(--white);
+        nav {
+          // background-color: red;
+          position: sticky;
+          max-width: var(--max-width);
+          top: 20px;
+          width: 90%;
+          margin: 0 auto;
+          height: 5rem;
+          display: flex;
+          // justify-content: center;
+          align-items: center;
+
+          ul {
+            display: flex;
+            // background-color: green;
+            font-family: var(--Mont);
+            font-weight: var(--MontBold);
+            text-transform: capitalize;
+            gap: 1rem;
+            font-size: var(--normal-font-size);
+
+            .active {
+              color: var(--sec);
+              position: relative;
+            }
+
+            .active:after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              display: block;
+              border-top: 1px solid #cb0b1b;
+              margin-top: 1rem;
+            }
+
+            li {
+              color: #727272;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      #league-sec {
+        // min-height: 100vh;
+        width: 100%;
+        // background-color: green;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        margin-top: 2rem;
+
+        .row {
+          // background-color: purple;
+          width: 95%;
+          margin: 0 auto;
+          justify-content: space-between;
+
+          .league-ct {
+            background-color: var(--white);
+            border-radius: 10px;
+            // min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+
+            .league-type {
+              // background-color: red;
+
+              ul {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 2rem;
+                overflow-x: scroll;
+                flex-wrap: wrap;
+
+                li {
+                  font-family: var(--Mont);
+                  text-transform: capitalize;
+                  font-weight: var(--MontSemi);
+                  cursor: pointer;
+                  color: #727272;
+                  padding: 0.5rem 0.5rem;
+                  border-radius: 20px;
+                }
+                .active {
+                  background-color: var(--sec);
+                  color: var(--white);
+                }
+              }
+            }
+            .league-div {
+              height: 100%;
+              // background-color: red;
+              margin-top: 1rem;
+              display: grid;
+              place-items: center;
+
+              .loading-div {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // background-color: red;
+                gap: 1rem;
+
+                h3 {
+                  font-family: var(--Mont);
+                  font-weight: var(--MontMed);
+                  color: #727272;
+                }
+
+                @keyframes spinner {
+                  100% {
+                    transform: rotate(360deg);
+                  }
+                }
+
+                .league-loader {
+                  width: 2rem;
+                  height: 2rem;
+                  border: 5px solid #727272;
+                  border-radius: 50%;
+                  border-top-color: transparent;
+                  animation: spinner 1.5s linear infinite;
+                }
+              }
+              .league-table-div {
+                height: 100%;
+                width: 100%;
+                // background-color: green;
+                margin-top: 2rem;
+
+                .table-scorer {
+                  .row {
+                    width: 100%;
+                    height: 200px;
+                    padding: 0;
+                    margin: 0;
+                    .scorer {
+                      // height: 100%;
+                      background-color: var(--primary);
+                      background: #110f0f;
+                      background-position: center;
+                      background-size: cover;
+                      border-radius: 10px;
+                      display: flex;
+                      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                      position: relative;
+                      justify-content: space-between;
+                      margin: 0 auto;
+                      padding: 0;
+                      .scorer-details {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        max-width: 70%;
+                        padding: 9px;
+                        border-bottom-left-radius: inherit;
+                        border-top-left-radius: inherit;
+                        .scorerName {
+                          z-index: 4;
+                          color: var(--white);
+                          h3 {
+                            font-family: var(--Mont);
+                            font-weight: var(--MontBold);
+                            font-size: var(--h2-font-size);
+                            .ScorerfirstName {
+                              color: var(--sec);
+                            }
+                          }
+                          p {
+                            font-family: var(--Mont);
+                            font-weight: var(--MontReg);
+                            text-transform: capitalize;
+                          }
+                          p:after {
+                            content: "";
+                            width: 20%;
+                            height: 2px;
+                            background-color: #cb0b1b;
+                            display: block;
+                          }
+                          .match-info {
+                            height: 100px;
+                            // background-color: red;
+
+                            h4 {
+                              font-size: var(--smaller-font-size);
+                              font-family: var(--Mont);
+                              font-weight: var(--MontSemi);
+                              text-transform: capitalize;
+
+                              span {
+                                color: var(--sec);
+                              }
+                            }
+                          }
+                        }
+                        .scorer-club {
+                          // background-color: red;
+                          position: absolute;
+                          bottom: 0;
+                          left: 0;
+                          // width: 100%;
+                          img {
+                            width: 4rem;
+                          }
+                        }
+                      }
+                      .scorer-img {
+                        // background-color: var(--white);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 2;
+                        padding: 0;
+                        border-top-right-radius: inherit;
+                        border-bottom-right-radius: inherit;
+
+                        img {
+                          width: 100%;
+                          border-radius: 50%;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .league-standing {
+                height: 50vh;
+                width: 100%;
+                background-color: red;
+                margin-top: 2rem;
+              }
+            }
+          }
+          .news-section {
+            min-height: 80vh;
+            background-color: var(--white);
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}

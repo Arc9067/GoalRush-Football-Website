@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="a website developed by Mikail Rokib @Arc9067 using html css and js"
+    />
+    <meta name="author" content="Mikail Rokib" />
+    <!-- ----------------------------------------styles------------------------------ -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/22d9f2c7a2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Football website</title>
+  </head>
+  <body>
+    <div class="body-overlay">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill="#FFFFFF"
+          d="M50.3,-66.6C65.3,-58.4,77.5,-43.8,79.6,-28.1C81.6,-12.4,73.4,4.4,65.6,19.2C57.8,33.9,50.5,46.7,39.7,57C28.8,67.3,14.4,75,0.1,74.9C-14.2,74.7,-28.3,66.6,-36.7,55.5C-45.1,44.4,-47.8,30.4,-53.3,16.6C-58.8,2.7,-67.2,-10.9,-65.8,-23.3C-64.4,-35.7,-53.3,-46.9,-40.7,-55.9C-28.1,-64.9,-14.1,-71.7,1.8,-74.2C17.7,-76.7,35.3,-74.8,50.3,-66.6Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+    </div>
+    <div class="ball-overlay">
+      <img class="ball-img" src="./images/ball2.png" alt="ball" />
+    </div>
+
+    <!-- <img src="./images/boot1.png" alt="football boot" class="boot1-overlay" /> -->
+
+    <header>
+      <nav>
+        <div class="inner-nav">
+          <div class="nav-logo">
+            <a href="#" class="title"
+              ><img src="./images/logo.png" alt="logo" />GoalRush Football</a
+            >
+            <div class="nav-txt">
+              <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">matches</a></li>
+                <li><a href="">tournament</a></li>
+                <li><a href="">support</a></li>
+                <li>
+                  <a href=""
+                    ><button class="btn">
+                      <i class="fa-solid fa-dollar-sign"></i> bet now
+                    </button></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div class="nav-btn">d</div> -->
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <img
+          src="./images/players1.png"
+          alt="players jubilating"
+          class="players1-overlay"
+        />
+
+        <div class="inner-home">
+          <div class="row">
+            <section class="col-img col-lg-6 col-sm-12 col-md-6">
+              <img src="./images/person.png" alt="person" />
+            </section>
+            <section class="col-txt col-lg-6 col-sm-12 col-md-6">
+              <h2 class="subtitle"><span>fun and</span> competitive</h2>
+              <h1 class="title">
+                <span>Goal</span><span class="Rushspan">Rush</span> Foot<span
+                  >ball</span
+                >
+              </h1>
+              <p class="des">
+                Whether you're a seasoned pro or just starting out, we have
+                something for everyone.
+              </p>
+
+              <footer class="footer">
+                <img src="./images/coach1.png" role="button" alt="ball" />
+                <a href="" class="btn"
+                  ><i class="fa-solid fa-code"></i> source code</a
+                >
+              </footer>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="inner-about">
+          <div class="row inner-about-row">
+            <section class="about-txt1 col-lg-8 col-sm-10 col-md-6">
+              <div class="row">
+                <div class="arow2-first-div col-lg-12 col-sm-10 col-md-12">
+                  <div class="arow2-txt">
+                    <h1 class="title">about goal<span>rush</span></h1>
+                    <div class="para">
+                      <p>
+                        GoalRush Football is a company that specializes in
+                        organizing and promoting football events, leagues, and
+                        tournaments. Our goal is to provide a fun and
+                        competitive environment for players of all ages and
+                        skill levels to come together and enjoy the beautiful
+                        game.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="about-firstimg">
+                    <img src="./images/person2.png" alt="" />
+                  </div>
+                </div>
+                <div class="about-div2">
+                  <figure>
+                    <img
+                      src="./images/person3.png"
+                      loading="lazy"
+                      alt="Crawford"
+                    />
+                    <figcaption>Alex Crawford</figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="./images/person4.png"
+                      loading="lazy"
+                      alt="Davis"
+                    />
+                    <figcaption>Olivia Davis</figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="./images/person5.png"
+                      loading="lazy"
+                      alt="Garcia"
+                    />
+                    <figcaption>Isabella Garcia</figcaption>
+                  </figure>
+                </div>
+                <div class="about-div3">
+                  <div class="div3-1txt">
+                    <h2 class="title">our history</h2>
+                    <p>
+                      GoalRush is a football website that was founded in 2015 by
+                      a group of passionate football fans who wanted to create a
+                      platform for discussing and analyzing the world of
+                      football.
+                      <br /><br />
+                      The idea for GoalRush originated from a group of friends
+                      who would often gather to watch and discuss football
+                      matches.
+                    </p>
+                  </div>
+                  <div class="div3-2txt">
+                    <h2 class="title">mission statement</h2>
+                    <p>
+                      "At GoalRush, our mission is to provide football fans with
+                      the best possible content and analysis, covering all
+                      aspects of the beautiful game. We are committed to
+                      delivering timely, accurate, and insightful news,
+                      commentary, and opinion pieces, from the biggest stories
+                      in the world of football to the latest trends and
+                      developments. Our goal is to create a vibrant and engaged
+                      community of football fans who can share their passion and
+                      insights, and to become a trusted source of information
+                      and analysis for fans around the world."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="about-txt2 col-lg-4 col-sm-10 col-md-4">
+              <div class="abouttxt2-div">
+                <div>
+                  <h2 class="title">our passion</h2>
+                  <p>
+                    We are passionate about football and believe that it is more
+                    than just a game. It is a sport that unites people from
+                    around the world and has the power to inspire and bring
+                    people together.
+
+                    <br /><br />
+                    We are committed to delivering the highest quality content
+                    and analysis, ensuring that our readers can rely on us for
+                    accurate and insightful information about the world of
+                    football
+                  </p>
+                </div>
+                <div>
+                  <h2 class="title">our passion</h2>
+                  <p>
+                    We are passionate about football and believe that it is more
+                    than just a game. It is a sport that unites people from
+                    around the world and has the power to inspire and bring
+                    people together.
+
+                    <br /><br />
+                    We are committed to delivering the highest quality content
+                    and analysis, ensuring that our readers can rely on us for
+                    accurate and insightful information about the world of
+                    football
+                  </p>
+                </div>
+                <div>
+                  <h2 class="title">our passion</h2>
+                  <p>
+                    We are passionate about football and believe that it is more
+                    than just a game. It is a sport that unites people from
+                    around the world and has the power to inspire and bring
+                    people together.
+
+                    <br /><br />
+                    We are committed to delivering the highest quality content
+                    and analysis, ensuring that our readers can rely on us for
+                    accurate and insightful information about the world of
+                    football
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="table">
+        <div class="inner-table">
+          <div class="table-header">
+            <nav>
+              <ul class="t-ul">
+                <li class="active listtactive tableh-li tableh-li1">
+                  standing
+                </li>
+                <li class="tableh-li tableh-li2">transfers</li>
+                <li class="tableh-li tableh-li3">news</li>
+              </ul>
+            </nav>
+          </div>
+          <section id="league-sec">
+            <div class="row">
+              <div class="league-ct col-lg-8">
+                <div class="league-type">
+                  <ul>
+                    <li class="active li1 type-li">la liga</li>
+                    <li class="li2 type-li">bundesliga</li>
+                    <li class="li3 type-li">premier league</li>
+                    <li class="li4 type-li">seria a</li>
+                    <li class="li5 type-li">champions league</li>
+                    <li class="li6 type-li">ligue 1</li>
+                  </ul>
+                </div>
+                <div class="league-div">
+                  <!-- <div class="loading-div">
+                    <span class="league-loader"> </span>
+                    <h3>Loading League Standing</h3>
+                  </div> -->
+                  <div class="league-table-div">
+                    <div class="table-scorer">
+                      <div class="row">
+                        <div class="col-lg-8 scorer">
+                          <div class="scorer-details">
+                            <div class="scorerName">
+                              <h3>
+                                <span class="ScorerfirstName">Erling</span>
+                                <span class="ScorerlastName"
+                                  >Braut Haaland</span
+                                >
+                              </h3>
+                              <p>league top scorer</p>
+                              <div class="match-info">
+                                <h4>Matches Played: <span>55</span></h4>
+                                <h4>goal Scored: <span>55</span></h4>
+                              </div>
+                            </div>
+                            <div class="scorer-club">
+                              <img
+                                src="https://media.api-sports.io/football/teams/50.png"
+                                alt="club"
+                              />
+                            </div>
+                          </div>
+                          <div class="scorer-img">
+                            <img
+                              src="https://media.api-sports.io/football/players/1100.png"
+                              alt="player"
+                            />
+                          </div>
+                        </div>
+                        <!-- <div class="col-lg-5 transfer"></div> -->
+                      </div>
+                    </div>
+                    <div class="league-standing">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 news-section"></div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <!-- -----------------------------------------script---------------------------------- -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script/script.js" type="module" defer="true"></script>
+  </body>
+</html>
